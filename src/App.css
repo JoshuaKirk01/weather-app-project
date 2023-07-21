@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app {
+    background-size: cover;
+    background-position: bottom;
+    transition: 400ms ease-in-out;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 25px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
+}
+
+.app-content {
+    max-width: 520px;
+    width: 100%;
+}
+
+.search-box {
+    margin: 0 0 75px;
+}
+
+.search-bar {
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    font-family: inherit;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.info-box {
+    padding: 25px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+}
+
+.temp {
+    font-weight: bold;
+    font-size: 96px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.weather {
+    font-size: 48px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.location {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.extra {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.clear {
+    background-image: url(assets/clear.jpg);
+}
+
+.clouds {
+    background-image: url(assets/clouds.jpg);
+}
+
+.rain {
+    background-image: url(assets/rain.jpg);
+}
