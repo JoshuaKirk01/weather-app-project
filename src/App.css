@@ -64,6 +64,15 @@ main {
     border-radius: 16px;
 }
 
+.temp-icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    object-fit: cover;
+}
+
 .temp {
     font-weight: bold;
     font-size: 96px;

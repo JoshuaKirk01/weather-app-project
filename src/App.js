@@ -6,6 +6,12 @@ const api = {
     base: "https://api.openweathermap.org/data/2.5/"
 }
 
+function getIcon(result) {
+    var icon = result.weather[0].icon;
+    const image = document.getElementById("icon");
+    image.src = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
+}
+
 function App() {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
@@ -17,7 +23,7 @@ function App() {
             .then(result => {
                 setQuery('');
                 setWeather(result);
-                console.log(result);
+                getIcon(result);
             });
         }
     }
@@ -42,7 +48,10 @@ function App() {
                     {(typeof weather.main != "undefined") ? (
                     <div>
                         <div className="info-box">
-                            <div className="temp">{Math.round(weather.main.temp)}°</div>
+                            <div className="temp-icon">
+                                <div className="temp">{Math.round(weather.main.temp)}°</div>
+                                <img src="" alt="Weather Icon" id="icon" className="icon"></img>
+                            </div>
                             <div className="weather">{weather.weather[0].main}</div>
                             <div className="location">{weather.name}, {weather.sys.country}</div>
                             <div className="extra">{Math.round(weather.main.temp_max)}
