@@ -43,6 +43,24 @@ function App() {
                             ° / {Math.round(weather.main.temp_min)}
                             ° Feels like {Math.round(weather.main.feels_like)}°</div>
                         </div>
+                        <div className="small-info-container">
+                            <div className="small-info-box">
+                                <p className="extra">Humidity</p>
+                                <div className="extra">{Math.round(weather.main.humidity)}%</div>
+                            </div>
+                            <div className="small-info-box">
+                                <p className="extra">Pressure</p>
+                                <div className="extra">{Math.round(weather.main.pressure)} hPa</div>
+                            </div>
+                            <div className="small-info-box">
+                                <p className="extra">Wind</p>
+                                <div className="extra">{Math.round(weather.wind.speed)} m/s</div>
+                            </div>
+                            <div className="small-info-box">
+                                <p className="extra">Wind Direction</p>
+                                <div className="extra">{Math.round(weather.wind.deg)}°</div>
+                            </div>
+                        </div>
                     </div>
                     ) : ('')}
                 </div>
