@@ -33,6 +33,12 @@ function App() {
                         <input type="text" className="search-bar" placeholder="Search City..." 
                         onChange={e => setQuery(e.target.value)} value={query} onKeyDown={search}></input>
                     </div>
+                    {(typeof weather.main == "undefined") ? (
+                    <div>
+                        <h1>City Not Found :&#40;</h1>
+                    </div>
+                    ) : ('')}
+
                     {(typeof weather.main != "undefined") ? (
                     <div>
                         <div className="info-box">
